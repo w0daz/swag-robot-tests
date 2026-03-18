@@ -26,4 +26,4 @@ jobs:
           pip install robotframework robotframework-seleniumlibrary selenium
 
       - name: Run Robot tests
-        run: robot --variable BROWSER:chrome --variable HEADLESS:True --variable URL:https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/swag_labs.html tests/
+        run: robot --variable BROWSER:chrome --variable HEADLESS:True --variable URL:file://${{ github.workspace }}/docs/swag_labs.html tests/
