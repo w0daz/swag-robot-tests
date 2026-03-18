@@ -1,0 +1,29 @@
+name: Robot Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install robotframework robotframework-seleniumlibrary selenium
+
+      - name: Run Robot tests
+        run: robot --variable BROWSER:chrome --variable HEADLESS:True --variable URL:https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/swag_labs.html tests/

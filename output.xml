@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-18T16:20:07.303735" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\gabri\OneDrive - Kaakkois-Suomen ammattikorkeakoulu Oy\toimeksianto\sess3i\sftwr_tstng\swag\robot-testing-project\tests">
+<suite id="s1-s1" name="Test Swag Labs" source="C:\Users\gabri\OneDrive - Kaakkois-Suomen ammattikorkeakoulu Oy\toimeksianto\sess3i\sftwr_tstng\swag\robot-testing-project\tests\test_swag_labs.robot">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary" type="SETUP">
+<arg>NONE</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.810517" elapsed="0.002346"/>
+</kw>
+<test id="s1-s1-t1" name="Complete Purchase Flow" line="30">
+<kw name="Open Application">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'chrome'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.831767" elapsed="0.002518"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<arg>$options.add_argument('--window-size=1920,1080')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.835428" elapsed="0.001400"/>
+</kw>
+<if>
+<branch type="IF" condition="'${HEADLESS}' == 'True'">
+<kw name="Evaluate" owner="BuiltIn">
+<arg>$options.add_argument('--headless=new')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.838328" elapsed="0.001238"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<arg>$options.add_argument('--no-sandbox')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.840789" elapsed="0.002655"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<arg>$options.add_argument('--disable-dev-shm-usage')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.844439" elapsed="0.001203"/>
+</kw>
+<status status="PASS" start="2026-03-18T16:20:08.837550" elapsed="0.008499"/>
+</branch>
+<status status="PASS" start="2026-03-18T16:20:08.837395" elapsed="0.009142"/>
+</if>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.847745" elapsed="0.002405"/>
+</kw>
+<status status="PASS" start="2026-03-18T16:20:08.830581" elapsed="0.020400"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.853814" elapsed="0.001842"/>
+</kw>
+<status status="PASS" start="2026-03-18T16:20:08.851657" elapsed="0.004841"/>
+</branch>
+<status status="PASS" start="2026-03-18T16:20:08.830362" elapsed="0.028104"/>
+</if>
+<status status="PASS" start="2026-03-18T16:20:08.828470" elapsed="0.030762"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.862093" elapsed="0.002702"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.870335" elapsed="0.005270"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.877926" elapsed="0.001733"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.881785" elapsed="0.002830"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.886609" elapsed="0.002339"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=product-page</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.891151" elapsed="0.003031"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.896186" elapsed="0.002579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@onclick,'addToCart(1)')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.901109" elapsed="0.002348"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@onclick,'addToCart(1)')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.906505" elapsed="0.000857"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.909071" elapsed="0.001784"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@onclick,'addToCart(2)')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.912130" elapsed="0.002033"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.919646" elapsed="0.002538"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@onclick,'addToCart(3)')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.925343" elapsed="0.001214"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.928176" elapsed="0.004560"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@onclick,'addToCart(4)')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.934594" elapsed="0.001182"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>id=cart-count</arg>
+<arg>4</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.938047" elapsed="0.001337"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.941841" elapsed="0.001844"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>css:.cart-icon</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.946170" elapsed="0.001706"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=checkout-page</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.951068" elapsed="0.002769"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.955977" elapsed="0.002176"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=(//button[normalize-space()='Remove'])[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.962256" elapsed="0.001390"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>xpath=(//button[normalize-space()='Remove'])[1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.971476" elapsed="0.002224"/>
+</kw>
+<arg>3s</arg>
+<arg>200ms</arg>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=(//button[normalize-space()='Remove'])[1]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-03-18T16:20:08.965758" elapsed="0.008691"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${remaining_items}</var>
+<arg>xpath=//button[normalize-space()='Remove']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.976801" elapsed="0.001034"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${remaining_items}</arg>
+<arg>3</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.979410" elapsed="0.001410"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.983860" elapsed="0.003529"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=first-name</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.990406" elapsed="0.001453"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=last-name</arg>
+<arg>User</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.994697" elapsed="0.001269"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=postal-code</arg>
+<arg>45100</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:08.998056" elapsed="0.002193"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:09.003415" elapsed="0.002795"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Complete Purchase']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:09.008843" elapsed="0.001910"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=confirmation-page</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:09.012456" elapsed="0.001250"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>${STEP_DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:09.015175" elapsed="0.001830"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Thank You For Your Order!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:09.023066" elapsed="0.001002"/>
+</kw>
+<status status="PASS" start="2026-03-18T16:20:08.816906" elapsed="0.209414"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-03-18T16:20:09.038692" elapsed="0.000639"/>
+</kw>
+<status status="PASS" start="2026-03-18T16:20:07.482416" elapsed="1.557364"/>
+</suite>
+<status status="PASS" start="2026-03-18T16:20:07.315836" elapsed="1.741053"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Test Swag Labs" id="s1-s1" pass="1" fail="0" skip="0">Tests.Test Swag Labs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
